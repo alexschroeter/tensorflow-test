@@ -1,0 +1,49 @@
+deployments:
+- build_id: 4eb23640-1303-4fdc-91a1-674f2d74d194
+  deployed_at: '2024-02-29T14:11:00.183456'
+  deployment_id: cc4cbba8-973b-4abe-8723-0a041d4db394
+  deployment_run: 557983f8-cd37-45f0-890e-065658dc378a
+  flavour: rocm
+  image: alexanderschroeter/tensorflow-test:0.0.1-rocm
+  inspection:
+    definitions:
+    - args: []
+      collections: []
+      description: No Description
+      interfaces: []
+      kind: FUNCTION
+      name: Returns a string with the tensorflow version
+      portGroups: []
+      returns:
+      - annotations: []
+        description: A string with the version of tensorflow
+        key: return0
+        kind: STRING
+        nullable: false
+        scope: GLOBAL
+    - args: []
+      collections: []
+      description: No Description
+      interfaces: []
+      kind: FUNCTION
+      name: Returns a string of the available physical devices.
+      portGroups: []
+      returns:
+      - annotations: []
+        description: list of physical devices
+        key: return0
+        kind: STRING
+        nullable: false
+        scope: GLOBAL
+    size: 37619359620
+  manifest:
+    author: alexschroeter
+    created_at: '2024-02-29T14:09:27.295661'
+    entrypoint: app
+    identifier: tensorflow-test
+    requirements: []
+    scopes:
+    - read
+    version: 0.0.1
+  selectors: []
+latest_deployment_run: 0bc6efc0-23b9-4880-ae6a-69ed0f889a81
