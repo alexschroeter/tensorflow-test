@@ -46,4 +46,98 @@ deployments:
     - read
     version: 0.0.1
   selectors: []
-latest_deployment_run: 0bc6efc0-23b9-4880-ae6a-69ed0f889a81
+- build_id: 2128228e-23fc-4b9b-aaef-3b7fb551c9ac
+  deployed_at: '2024-02-29T14:49:14.200586'
+  deployment_id: 8aba73a8-6462-4c9c-a52e-39407bfff0ff
+  deployment_run: c00db8a6-7e32-4ee2-acca-285bf63964c2
+  flavour: cuda
+  image: alexanderschroeter/tensorflow-test:0.0.1-cuda
+  inspection:
+    definitions:
+    - args: []
+      collections: []
+      description: No Description
+      interfaces: []
+      kind: FUNCTION
+      name: Returns a string with the tensorflow version
+      portGroups: []
+      returns:
+      - annotations: []
+        description: A string with the version of tensorflow
+        key: return0
+        kind: STRING
+        nullable: false
+        scope: GLOBAL
+    - args: []
+      collections: []
+      description: No Description
+      interfaces: []
+      kind: FUNCTION
+      name: Returns a string of the available physical devices.
+      portGroups: []
+      returns:
+      - annotations: []
+        description: list of physical devices
+        key: return0
+        kind: STRING
+        nullable: false
+        scope: GLOBAL
+    size: 7429053068
+  manifest:
+    author: alexschroeter
+    created_at: '2024-02-29T14:48:12.472577'
+    entrypoint: app
+    identifier: tensorflow-test
+    requirements: []
+    scopes:
+    - read
+    version: 0.0.1
+  selectors: []
+- build_id: d290c586-7480-48fe-a814-22098f039b87
+  deployed_at: '2024-03-08T13:37:21.444137'
+  deployment_id: 6f50a5ef-368c-47c7-a87d-fd06be61c4bc
+  deployment_run: 30be1d2f-ce67-44fd-9254-41664f960959
+  flavour: rocm
+  image: alexanderschroeter/tensorflow-test:0.0.3-rocm
+  inspection:
+    definitions:
+    - args: []
+      collections: []
+      description: No Description
+      interfaces: []
+      kind: FUNCTION
+      name: Returns a string with the tensorflow version
+      portGroups: []
+      returns:
+      - annotations: []
+        description: A string with the version of tensorflow
+        key: return0
+        kind: STRING
+        nullable: false
+        scope: GLOBAL
+    - args: []
+      collections: []
+      description: No Description
+      interfaces: []
+      kind: FUNCTION
+      name: Returns a string of the available physical devices.
+      portGroups: []
+      returns:
+      - annotations: []
+        description: list of physical devices
+        key: return0
+        kind: STRING
+        nullable: false
+        scope: GLOBAL
+    size: 37619370176
+  manifest:
+    author: alexschroeter
+    created_at: '2024-03-08T13:37:07.241844'
+    entrypoint: app
+    identifier: tensorflow-test
+    requirements: []
+    scopes:
+    - read
+    version: 0.0.3
+  selectors: []
+latest_deployment_run: 861af7eb-c382-4f69-9ee7-c6c568fd67b7

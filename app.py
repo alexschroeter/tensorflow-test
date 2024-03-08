@@ -25,7 +25,4 @@ def list_gpus() -> str:
     str
         list of physical devices
     """ """"""
-    string = ""
-    for i in range(tf.config.list_physical_devices('GPU')):
-        string += f"GPU {i}: {i.name}\n"
-    return string
+    return tf.config.list_physical_devices('GPU') 
