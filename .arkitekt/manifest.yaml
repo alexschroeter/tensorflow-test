@@ -1,7 +1,0 @@
-author: alexschroeter
-entrypoint: app
-identifier: tensorflow-test
-requirements: []
-scopes:
-- read
-version: 0.0.3
