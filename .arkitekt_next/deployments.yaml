@@ -278,4 +278,197 @@ deployments:
     - read
     version: 0.0.1
   selectors: []
-latest_deployment_run: 97068dcf-d013-4bad-b580-8d4aecdba502
+- build_id: a1945748-a93a-4f5f-bd92-69d08f33eb98
+  deployed_at: '2024-10-23T15:18:59.563779'
+  deployment_id: 9d52b4a7-46fc-444c-8ec8-14117e012339
+  deployment_run: 6f373358-518f-48f2-b1fe-77b81b0b5b66
+  flavour: rocm
+  image: alexanderschroeter/tensorflow-test:0.0.2-rocm
+  inspection:
+    requirements:
+      datalayer:
+        description: An instance of ArkitektNext Datalayer to make requests to the
+          user's data
+        optional: true
+        service: live.arkitekt.s3
+      fluss:
+        description: An instance of ArkitektNext fluss to retrieve graphs from
+        optional: false
+        service: live.arkitekt.fluss
+      kabinet:
+        description: An instance of ArkitektNext Kabinet to retrieve nodes from
+        optional: false
+        service: live.arkitekt.kabinet
+      livekit:
+        description: An instance of ArkitektNext Lok to authenticate the user
+        optional: false
+        service: io.livekit.livekit
+      lok:
+        description: An instance of ArkitektNext Lok to authenticate the user
+        optional: false
+        service: live.arkitekt.lok
+      mikro:
+        description: An instance of ArkitektNext Mikro to make requests to the user's
+          data
+        optional: true
+        service: live.arkitekt.mikro
+      rekuest:
+        description: An instance of ArkitektNext Rekuest to assign to nodes
+        optional: false
+        service: live.arkitekt.rekuest
+      unlok:
+        description: An instance of ArkitektNext Lok to authenticate the user
+        optional: false
+        service: live.arkitekt.lok
+    size: 37076695490
+    templates:
+    - definition:
+        args: []
+        collections: []
+        description: Returns a string with the tensorflow version
+        interfaces: []
+        isDev: false
+        isTestFor: []
+        kind: FUNCTION
+        name: Version
+        portGroups: []
+        returns:
+        - description: A string with the version of tensorflow
+          key: return0
+          kind: STRING
+          nullable: false
+          scope: GLOBAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: version
+    - definition:
+        args: []
+        collections: []
+        description: Returns a string of the available physical devices.
+        interfaces: []
+        isDev: false
+        isTestFor: []
+        kind: FUNCTION
+        name: List Gpus
+        portGroups: []
+        returns:
+        - description: list of physical devices
+          key: return0
+          kind: STRING
+          nullable: false
+          scope: GLOBAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: list_gpus
+  manifest:
+    author: Alexander Wilhelmi
+    created_at: '2024-10-23T15:18:40.742390'
+    entrypoint: app
+    identifier: tensorflow-test
+    scopes:
+    - read
+    version: 0.0.2
+  selectors:
+  - min: 1
+    required: true
+    type: rocm
+- build_id: 37a9e95d-5a11-4c7d-96b1-0ea32d1c03d4
+  deployed_at: '2024-10-23T15:20:22.533099'
+  deployment_id: d806d176-dd05-46ac-a3dc-33878eeeef86
+  deployment_run: 8b34d3b4-1446-46e5-891c-6b1d491b62cb
+  flavour: cuda
+  image: alexanderschroeter/tensorflow-test:0.0.2-cuda
+  inspection:
+    requirements:
+      datalayer:
+        description: An instance of ArkitektNext Datalayer to make requests to the
+          user's data
+        optional: true
+        service: live.arkitekt.s3
+      fluss:
+        description: An instance of ArkitektNext fluss to retrieve graphs from
+        optional: false
+        service: live.arkitekt.fluss
+      kabinet:
+        description: An instance of ArkitektNext Kabinet to retrieve nodes from
+        optional: false
+        service: live.arkitekt.kabinet
+      livekit:
+        description: An instance of ArkitektNext Lok to authenticate the user
+        optional: false
+        service: io.livekit.livekit
+      lok:
+        description: An instance of ArkitektNext Lok to authenticate the user
+        optional: false
+        service: live.arkitekt.lok
+      mikro:
+        description: An instance of ArkitektNext Mikro to make requests to the user's
+          data
+        optional: true
+        service: live.arkitekt.mikro
+      rekuest:
+        description: An instance of ArkitektNext Rekuest to assign to nodes
+        optional: false
+        service: live.arkitekt.rekuest
+      unlok:
+        description: An instance of ArkitektNext Lok to authenticate the user
+        optional: false
+        service: live.arkitekt.lok
+    size: 7704087890
+    templates:
+    - definition:
+        args: []
+        collections: []
+        description: Returns a string with the tensorflow version
+        interfaces: []
+        isDev: false
+        isTestFor: []
+        kind: FUNCTION
+        name: Version
+        portGroups: []
+        returns:
+        - description: A string with the version of tensorflow
+          key: return0
+          kind: STRING
+          nullable: false
+          scope: GLOBAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: version
+    - definition:
+        args: []
+        collections: []
+        description: Returns a string of the available physical devices.
+        interfaces: []
+        isDev: false
+        isTestFor: []
+        kind: FUNCTION
+        name: List Gpus
+        portGroups: []
+        returns:
+        - description: list of physical devices
+          key: return0
+          kind: STRING
+          nullable: false
+          scope: GLOBAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: list_gpus
+  manifest:
+    author: Alexander Wilhelmi
+    created_at: '2024-10-23T15:20:08.923157'
+    entrypoint: app
+    identifier: tensorflow-test
+    scopes:
+    - read
+    version: 0.0.2
+  selectors:
+  - compute_capability: '3.5'
+    cuda_version: '10.2'
+    required: true
+    type: cuda
+latest_deployment_run: 9c0c0b25-5bab-4090-accf-84ec1f3e0663
