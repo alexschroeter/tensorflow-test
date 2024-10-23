@@ -1,4 +1,4 @@
-from arkitekt import register
+from arkitekt_next import register
 import time
 import tensorflow as tf
 

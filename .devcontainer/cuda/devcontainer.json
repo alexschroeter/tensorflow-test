@@ -1,0 +1,10 @@
+{
+    "name": "tensorflow-test cuda Devcontainer",
+    "build": {
+        "dockerfile": "/home/aschroeter/src/tensorflow-test/.arkitekt_next/flavours/cuda/Dockerfile",
+        "context": "../.."
+    },
+    "runArgs": [
+        "--network=host"
+    ]
+}

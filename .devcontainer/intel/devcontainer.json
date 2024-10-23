@@ -1,0 +1,10 @@
+{
+    "name": "tensorflow-test intel Devcontainer",
+    "build": {
+        "dockerfile": "/home/aschroeter/src/tensorflow-test/.arkitekt_next/flavours/intel/Dockerfile",
+        "context": "../.."
+    },
+    "runArgs": [
+        "--network=host"
+    ]
+}

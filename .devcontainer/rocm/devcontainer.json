@@ -1,0 +1,10 @@
+{
+    "name": "tensorflow-test rocm Devcontainer",
+    "build": {
+        "dockerfile": "/home/aschroeter/src/tensorflow-test/.arkitekt_next/flavours/rocm/Dockerfile",
+        "context": "../.."
+    },
+    "runArgs": [
+        "--network=host"
+    ]
+}
