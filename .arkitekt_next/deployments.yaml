@@ -373,7 +373,7 @@ deployments:
   selectors:
   - min: 1
     required: true
-    type: rocm
+    kind: rocm
 - build_id: 37a9e95d-5a11-4c7d-96b1-0ea32d1c03d4
   deployed_at: '2024-10-23T15:20:22.533099'
   deployment_id: d806d176-dd05-46ac-a3dc-33878eeeef86
@@ -470,5 +470,5 @@ deployments:
   - compute_capability: '3.5'
     cuda_version: '10.2'
     required: true
-    type: cuda
+    kind: cuda
 latest_deployment_run: 9c0c0b25-5bab-4090-accf-84ec1f3e0663
