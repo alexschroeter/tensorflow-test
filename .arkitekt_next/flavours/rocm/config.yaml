@@ -10,5 +10,5 @@ description: This is a vanilla flavour
 dockerfile: Dockerfile
 selectors:
   - kind: rocm
-    apiVersion: "6.1"
-    apiThing: "v1"
+    apiVersion: 6.1
+    apiThing: 1
