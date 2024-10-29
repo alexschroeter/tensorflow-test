@@ -1,6 +1,6 @@
 FROM tensorflow/tensorflow:latest-gpu
 
-RUN pip install "arkitekt-next[all]>=0.8.10"
+RUN pip install "arkitekt-next[all]>=0.8.25"
 
 RUN mkdir /app
 WORKDIR /app

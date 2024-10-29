@@ -9,5 +9,6 @@ build_command:
 description: This is a vanilla flavour
 dockerfile: Dockerfile
 selectors:
-  - type: rocm
-    min: 1
+  - kind: rocm
+    apiVersion: "6.1"
+    apiThing: "v1"

@@ -2,6 +2,11 @@ from arkitekt_next import register
 import time
 import tensorflow as tf
 
+try:
+    import intel_extension_for_tensorflow as tf
+except:
+    "Intel extension for tensorflow not found"
+
 @register
 def version() -> str:
     """
@@ -25,4 +30,8 @@ def list_gpus() -> str:
     str
         list of physical devices
     """ """"""
-    return tf.config.list_physical_devices('GPU') 
+    result = ""
+    for i in range(tf.config.list_physical_devices()):
+        if i.device_type == 'GPU' or i.device_type == 'XPU':
+            result += f"GPU {i}: {i.name}\n"
+    return result
