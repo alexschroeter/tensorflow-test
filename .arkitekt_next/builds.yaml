@@ -278,4 +278,186 @@ builds:
   - apiThing: v1
     apiVersion: '6.1'
     kind: rocm
-latest_build_run: 265993a0-3bcf-4c89-b104-c4e5c77aaef4
+- build_id: 080d8479-d9b1-423e-99bd-bc1524287de1
+  build_run: a631853b-81b4-49f2-81c2-4b760b39dc06
+  description: This is a vanilla flavour
+  flavour: cuda
+  inspection:
+    requirements:
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: lok
+      optional: false
+      service: live.arkitekt.lok
+    - description: An instance of ArkitektNext fluss to retrieve graphs from
+      key: fluss
+      optional: false
+      service: live.arkitekt.fluss
+    - description: An instance of ArkitektNext Kabinet to retrieve nodes from
+      key: kabinet
+      optional: false
+      service: live.arkitekt.kabinet
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: livekit
+      optional: false
+      service: io.livekit.livekit
+    - description: An instance of ArkitektNext Mikro to make requests to the user's
+        data
+      key: mikro
+      optional: true
+      service: live.arkitekt.mikro
+    - description: An instance of ArkitektNext Datalayer to make requests to the user's
+        data
+      key: datalayer
+      optional: true
+      service: live.arkitekt.s3
+    - description: An instance of ArkitektNext Rekuest to assign to nodes
+      key: rekuest
+      optional: false
+      service: live.arkitekt.rekuest
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: unlok
+      optional: false
+      service: live.arkitekt.lok
+    size: 7704544242
+    templates:
+    - definition:
+        args: []
+        collections: []
+        description: Returns a string with the tensorflow version
+        interfaces: []
+        isDev: false
+        isTestFor: []
+        kind: FUNCTION
+        name: Version
+        portGroups: []
+        returns:
+        - description: A string with the version of tensorflow
+          key: return0
+          kind: STRING
+          nullable: false
+          scope: GLOBAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: version
+    - definition:
+        args: []
+        collections: []
+        description: Returns a string of the available physical devices.
+        interfaces: []
+        isDev: false
+        isTestFor: []
+        kind: FUNCTION
+        name: List Gpus
+        portGroups: []
+        returns:
+        - description: list of physical devices
+          key: return0
+          kind: STRING
+          nullable: false
+          scope: GLOBAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: list_gpus
+  manifest:
+    author: Alexander Wilhelmi
+    entrypoint: app
+    identifier: tensorflow-test
+    scopes:
+    - read
+    version: 0.0.1
+  selectors:
+  - kind: cuda
+- build_id: 08928821-580b-4f9a-acc2-1767e8e94653
+  build_run: eacb9785-c679-4929-8755-4a74551da634
+  description: This is a vanilla flavour
+  flavour: rocm
+  inspection:
+    requirements:
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: lok
+      optional: false
+      service: live.arkitekt.lok
+    - description: An instance of ArkitektNext fluss to retrieve graphs from
+      key: fluss
+      optional: false
+      service: live.arkitekt.fluss
+    - description: An instance of ArkitektNext Kabinet to retrieve nodes from
+      key: kabinet
+      optional: false
+      service: live.arkitekt.kabinet
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: livekit
+      optional: false
+      service: io.livekit.livekit
+    - description: An instance of ArkitektNext Mikro to make requests to the user's
+        data
+      key: mikro
+      optional: true
+      service: live.arkitekt.mikro
+    - description: An instance of ArkitektNext Datalayer to make requests to the user's
+        data
+      key: datalayer
+      optional: true
+      service: live.arkitekt.s3
+    - description: An instance of ArkitektNext Rekuest to assign to nodes
+      key: rekuest
+      optional: false
+      service: live.arkitekt.rekuest
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: unlok
+      optional: false
+      service: live.arkitekt.lok
+    size: 37077062751
+    templates:
+    - definition:
+        args: []
+        collections: []
+        description: Returns a string with the tensorflow version
+        interfaces: []
+        isDev: false
+        isTestFor: []
+        kind: FUNCTION
+        name: Version
+        portGroups: []
+        returns:
+        - description: A string with the version of tensorflow
+          key: return0
+          kind: STRING
+          nullable: false
+          scope: GLOBAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: version
+    - definition:
+        args: []
+        collections: []
+        description: Returns a string of the available physical devices.
+        interfaces: []
+        isDev: false
+        isTestFor: []
+        kind: FUNCTION
+        name: List Gpus
+        portGroups: []
+        returns:
+        - description: list of physical devices
+          key: return0
+          kind: STRING
+          nullable: false
+          scope: GLOBAL
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: list_gpus
+  manifest:
+    author: Alexander Wilhelmi
+    entrypoint: app
+    identifier: tensorflow-test
+    scopes:
+    - read
+    version: 0.0.1
+  selectors:
+  - kind: rocm
+latest_build_run: eacb9785-c679-4929-8755-4a74551da634

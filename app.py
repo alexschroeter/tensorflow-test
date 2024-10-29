@@ -30,8 +30,9 @@ def list_gpus() -> str:
     str
         list of physical devices
     """ """"""
+    physical_devices = tf.config.list_physical_devices()
     result = ""
-    for i in range(tf.config.list_physical_devices()):
-        if i.device_type == 'GPU' or i.device_type == 'XPU':
-            result += f"GPU {i}: {i.name}\n"
+    for i in range(len(physical_devices)):
+        if physical_devices[i].device_type == 'GPU' or physical_devices[i].device_type == 'XPU':
+            result += f"GPU {i}: {physical_devices[i].name}\n"
     return result
